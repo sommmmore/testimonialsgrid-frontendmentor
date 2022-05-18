@@ -1,0 +1,143 @@
+*{
+    --moderate-violet: hsl(263, 55%, 52%);
+    --grayish-blue: hsl(217, 19%, 35%);
+    --blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-blue: hsl(210, 46%, 95%);
+    
+}
+
+body{
+    padding: 0;
+    margin: 0px;
+    background-color: var(--light-blue);
+}
+
+main{
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    width: 85%;
+    height: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "dan dan jon kira"
+    "jean pat pat kira";
+    grid-gap: 20px;
+    position: relative;
+    top: 50px;
+    color:hsl(0, 0%, 81%);
+    margin-bottom: 50px;
+}
+
+.card{
+    height: auto;
+    padding: 10px 25px 8px 25px;
+    border-radius: 8px;
+    box-shadow: 8px 10px 10px -5px hsl(0, 0%, 75%);
+    position: relative;
+}
+
+#card1{
+    grid-area: dan;
+    background-color: var(--moderate-violet);
+    color:hsl(210, 46%, 95%)
+}
+
+#quotes{
+    position: absolute;
+    right: 55px;
+    top: 2px;
+    z-index: 1;
+    opacity: 1;
+}
+#special-case{
+    position: relative;
+    z-index: 2;
+    background-color: none;
+}
+
+
+#card2{
+    grid-area: jon;
+    background-color: var(--grayish-blue);
+    color:hsl(0, 0%, 100%);
+}
+
+#card3{
+    grid-area: kira;
+    background-color: var(--white);
+    color:hsl(219, 29%, 14%);
+}
+
+#card4{
+    grid-area: jean;
+    background-color: var(--white);
+    color:hsl(219, 29%, 14%);
+}
+
+#card5{
+    grid-area: pat;
+    background-color: var(--blackish-blue);
+    color:hsl(210, 46%, 95%);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    height: 60px;   
+    margin-bottom: 5px;
+}
+
+header > img{
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    align-self: center;
+}
+
+.sub-head{
+    line-height: 1px;
+    padding-left: 8px;    
+    align-self: center;
+}
+
+.highlights{
+    font-size: x-large;
+    font-weight: 600;
+}
+
+
+.name{
+    font-size: large;
+}
+.verified{
+    font-size: small;
+    opacity: 0.5;
+}
+
+.testimonial{
+    opacity: 0.7;
+    font-size: medium;
+    font-weight: 400;
+}
+
+
+
+.attribution {
+    font-size: 20px; text-align: center; 
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+  
+@media (max-width:900px){
+    main{
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+    }
+}
